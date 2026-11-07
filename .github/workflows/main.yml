@@ -75,6 +75,7 @@ jobs:
           POSTGRES_HOST: localhost
           POSTGRES_PORT: 5432
         run: |
+          python manage.py collectstatic --noinput
           python manage.py test
 
   build-and-push:
